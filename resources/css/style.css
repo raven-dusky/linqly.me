@@ -19,5 +19,37 @@
 body {
     background-color: var(--background-color);
     font-family: 'SpaceGrotesk';
+    font-size: 14px;
     color: var(--text-color);
+}
+
+.auth-d-flex {
+    min-height: 100vh;
+}
+
+.auth-title {
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.auth-input:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid var(--text-color);
+}
+
+.auth-btn {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    transition: all 0.2s ease;
+}
+
+.auth-btn:hover {
+    background-color: #3c3c3c;
+    color: var(--background-color);
+}
+
+.auth-link {
+    color: blue;
 }
