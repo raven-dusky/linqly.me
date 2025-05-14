@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedBigInteger('social_id');
+            $table->unsignedBigInteger('social_id')->nullable();
             $table->foreign('social_id')->references('id')->on('socials');
             $table->string('url');
             $table->timestamps();

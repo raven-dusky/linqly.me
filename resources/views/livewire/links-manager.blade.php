@@ -10,20 +10,25 @@
             <input type="text" class="form-control auth-input" id="{{ $social['icon'] }}-link" name="{{ $social['icon'] }}-link" placeholder="https://" wire:model="socialLinks.{{ $social['name'] }}" value="{{ $userLink?->url }}">
         </div>
         @endforeach
-        <p class="fst-italic">Add custom sites..</p>
-        @for($i = 0; $i <= 4; $i++)
+        <p class="fst-italic mt-4">Add custom sites (max 5)</p>
+        @foreach(range(0, 4) as $i)
             <div class="mb-3 input-group">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-link"></i></span>
-                <input type="text" class="form-control auth-input" id="general-link" name="general-link" placeholder="https://">
+                <span class="input-group-text"><i class="bi bi-link-45deg"></i></span>
+                <input type="text" class="form-control auth-input" wire:model="genericLinks.{{ $i }}.url" placeholder="https://">
+                <input type="hidden" wire:model="genericLinks.{{ $i }}.id">
             </div>
-        @endfor
+        @endforeach
     @endif
     @if($show == false)
         @forelse($links as $link)
         <a class="card-link" href="{{ $link->url }}">
             <div class="mb-3 input-group card-container">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-{{ $link->social?->icon }}"></i></span>
-                <input type="text" class="form-control auth-input" value="{{ $link->url }}" readonly>
+                @if($link->social_id)
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-{{ $link->social?->icon }}"></i></span>
+                @else
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-link-45deg"></i></span>
+                @endif
+                <input type="text" class="form-control auth-input" value="{{ !empty($link->url) ? $link->url : '' }}" readonly>
             </div>
         </a>
         @empty
