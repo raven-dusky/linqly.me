@@ -30,32 +30,32 @@ Linqly.me is an open-source project inspired by Linktree, designed for those who
 
 Follow these steps to clone and run the project locally:
 
+```bash
 # Clone the repository
 git clone https://github.com/raven-dusky/linqly.me.git
 cd linqly.me
 
-# Install PHP dependencies
+# Install dependencies
 composer install
-
-# Install JavaScript dependencies
 npm install
 
-# Copy the environment configuration file
+# Setup environment configuration
 cp .env.example .env
-
-# Generate the application key
 php artisan key:generate
 
-# Configure the database in the .env file (DB_DATABASE, DB_USERNAME, DB_PASSWORD, MAIL..)
+# Configure database and mail settings in .env
+# (Edit the following lines inside the .env file)
+# DB_DATABASE=your_db
+# DB_USERNAME=your_user
+# DB_PASSWORD=your_password
+# MAIL_...
 
-# Run migrations and seed the database
+# Run database migrations with seeding
 php artisan migrate --seed
 
-# Start the Laravel development server
+# Start local development server
 php artisan serve
 
-# In a second terminal, start Vite for assets
+# In a separate terminal, compile assets with Vite
 npm run dev
-
-# In un secondo terminale, avvia Vite per gli assets
-npm run dev
+```
