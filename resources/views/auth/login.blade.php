@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8">
-                    <form action="{{ route('login') }}" method="POST" class="p-5">
+                    <form action="{{ route('login') }}" method="POST" class="p-4">
                     @csrf
                         <h1 class="text-left mb-4 auth-title">👋🏻 Welcome back!</h1>
                         <div class="mb-3">

@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8">
-                    <form method="POST" action="{{ route('password.update') }}" class="p-5">
+                    <form method="POST" action="{{ route('password.update') }}" class="p-4">
                     @csrf
                         <h1 class="text-left mb-1 auth-title">👀 Reset your password</h1>
                         <p class="mb-4">Please enter and confirm your new password to reset your account.</p>

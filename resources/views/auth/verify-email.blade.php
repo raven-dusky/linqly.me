@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8">
-                    <form method="POST" action="{{ route('verification.send') }}" class="p-5">
+                    <form method="POST" action="{{ route('verification.send') }}" class="p-4">
                     @csrf
                         <h1 class="text-left mb-1 auth-title">📬 Please verify your email!</h1>
                         <p class="mb-4">We've sent a verification email to <strong>{{ Auth::user()->email }}</strong></p>
