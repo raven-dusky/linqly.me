@@ -2,7 +2,7 @@
     <form class="container-fluid my-5" wire:submit.prevent="{{ $show ? 'saveInputs' : 'showInputs' }}">
     @if($show)
         <h1>You can share your page using this link:</h1>
-        <h4 class="mb-5"><a href="http://192.168.1.19:8000/{{ Auth::user()->name }}" target="_blank">http://example.com/{{ Auth::user()->name }}</a></h4>
+        <h4 class="mb-5"><a href="http://localhost:8000/{{ Auth::user()->name }}" target="_blank">http://localhost:8000/{{ Auth::user()->name }}</a></h4>
         @foreach($socials as $social)
             @if(!str_contains($social->name, 'generic'))
                 <div class="mb-3 input-group">
