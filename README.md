@@ -9,10 +9,10 @@ Linqly.me is an open-source project inspired by Linktree, designed for those who
   <img src="screenshots/IMG_0274.jpg" width="200"/>
   <img src="screenshots/IMG_0275.jpg" width="200"/>
   <img src="screenshots/IMG_0276.jpg" width="200"/>
+  <img src="screenshots/IMG_0281.jpg" width="200"/>
 </p>
 
 <p align="center">
-  <img src="screenshots/IMG_0281.jpg" width="200"/>
   <img src="screenshots/IMG_0277.jpg" width="200"/>
   <img src="screenshots/IMG_0278.jpg" width="200"/>
   <img src="screenshots/IMG_0279.jpg" width="200"/>
