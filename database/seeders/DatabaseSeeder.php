@@ -51,7 +51,7 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        foreach (range(1, 5) as $i) {
+        for ($i = 1; $i <= 5; $i++) {
             Social::create([
                 'name' => 'generic_' . $i,
                 'icon' => 'link-45deg',

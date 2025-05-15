@@ -12,6 +12,12 @@ class PublicController extends Controller
 {
     public function index()
     {
+        if (!Auth::check()) {
+            return redirect('/login');
+        }
+        if (!Auth::user()->hasVerifiedEmail()) {
+            return redirect()->route('verification.notice');
+        }
         return view('welcome');
     }
 

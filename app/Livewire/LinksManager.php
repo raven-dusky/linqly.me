@@ -25,8 +25,8 @@ class LinksManager extends Component
 
     public function saveInputs()
     {
-        foreach ($this->socialLinks as $socialId => $url) {
-            $social = Social::find($socialId);
+        foreach ($this->socialLinks as $social_id => $url) {
+            $social = Social::find($social_id);
 
             if ($social) {
                 if (!empty($url)) {

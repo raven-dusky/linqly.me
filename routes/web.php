@@ -5,15 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\RateLimiter;
 use App\Http\Controllers\PublicController;
 
-Route::get('/', function () {
-    if (!Auth::check()) {
-        return redirect('/login');
-    }
-    if (!Auth::user()->hasVerifiedEmail()) {
-        return redirect()->route('verification.notice');
-    }
-    return app(\App\Http\Controllers\PublicController::class)->index();
-})->name('homepage');
+Route::get('/', [PublicController::class, 'index'])->name('homepage');
 
 Route::post('/email/verification-notification', function (Request $request) {
     $key = 'resend-verification-email:' . $request->user()->id;
