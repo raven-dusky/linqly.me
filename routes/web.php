@@ -49,3 +49,5 @@ Route::post('/forgot-password', function (Request $request) {
         ? back()->with('status', __($status))
         : back()->withErrors(['email' => __($status)]);
 })->name('password.email');
+
+Route::get('/{user}', [PublicController::class, 'show'])->name('show.user');

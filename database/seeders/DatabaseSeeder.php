@@ -10,24 +10,24 @@ use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
     public $socials = [
-        ['icon' => 'bluesky', 'name' => 'bluesky'],
-        ['icon' => 'discord', 'name' => 'discord'],
-        ['icon' => 'facebook', 'name' => 'facebook'],
-        ['icon' => 'github', 'name' => 'github'],
-        ['icon' => 'instagram', 'name' => 'instagram'],
-        ['icon' => 'linkedin', 'name' => 'linkedin'],
-        ['icon' => 'messenger', 'name' => 'messenger'],
-        ['icon' => 'paypal', 'name' => 'paypal'],
-        ['icon' => 'pinterest', 'name' => 'pinterest'],
-        ['icon' => 'reddit', 'name' => 'reddit'],
-        ['icon' => 'snapchat', 'name' => 'snapchat'],
-        ['icon' => 'spotify', 'name' => 'spotify'],
-        ['icon' => 'telegram', 'name' => 'telegram'],
-        ['icon' => 'tiktok', 'name' => 'tiktok'],
-        ['icon' => 'twitch', 'name' => 'twitch'],
-        ['icon' => 'twitter-x', 'name' => 'twitter-x'],
-        ['icon' => 'whatsapp', 'name' => 'whatsapp'],
-        ['icon' => 'youtube', 'name' => 'youtube']
+        ['icon' => 'bluesky', 'name' => 'bluesky', 'color' => '#0055FF'],
+        ['icon' => 'discord', 'name' => 'discord', 'color' => '#5865F2'],
+        ['icon' => 'facebook', 'name' => 'facebook', 'color' => '#1877F2'],
+        ['icon' => 'github', 'name' => 'github', 'color' => '#181717'],
+        ['icon' => 'instagram', 'name' => 'instagram', 'color' => '#E4405F'],
+        ['icon' => 'linkedin', 'name' => 'linkedin', 'color' => '#0A66C2'],
+        ['icon' => 'messenger', 'name' => 'messenger', 'color' => '#0084FF'],
+        ['icon' => 'paypal', 'name' => 'paypal', 'color' => '#003087'],
+        ['icon' => 'pinterest', 'name' => 'pinterest', 'color' => '#BD081C'],
+        ['icon' => 'reddit', 'name' => 'reddit', 'color' => '#FF4500'],
+        ['icon' => 'snapchat', 'name' => 'snapchat', 'color' => '#FFFC00'],
+        ['icon' => 'spotify', 'name' => 'spotify', 'color' => '#1DB954'],
+        ['icon' => 'telegram', 'name' => 'telegram', 'color' => '#26A5E4'],
+        ['icon' => 'tiktok', 'name' => 'tiktok', 'color' => '#FF0050'],
+        ['icon' => 'twitch', 'name' => 'twitch', 'color' => '#9146FF'],
+        ['icon' => 'twitter-x', 'name' => 'twitter-x', 'color' => '#000000'],
+        ['icon' => 'whatsapp', 'name' => 'whatsapp', 'color' => '#25D366'],
+        ['icon' => 'youtube', 'name' => 'youtube', 'color' => '#FF0000']
     ];
 
     /**
@@ -46,7 +46,16 @@ class DatabaseSeeder extends Seeder
         foreach ($this->socials as $social) {
             Social::create([
                 'name' => $social['name'],
-                'icon' => $social['icon']
+                'icon' => $social['icon'],
+                'color' => $social['color']
+            ]);
+        }
+
+        foreach (range(1, 5) as $i) {
+            Social::create([
+                'name' => 'generic_' . $i,
+                'icon' => 'link-45deg',
+                'color' => '#000000'
             ]);
         }
     }

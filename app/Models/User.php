@@ -48,6 +48,11 @@ class User extends Authenticatable implements MustVerifyEmail
         ];
     }
 
+    public function getRouteKeyName()
+    {
+        return 'name';
+    }
+
     public function links()
     {
         return $this->hasMany(Link::class);

@@ -11,7 +11,6 @@ class LinksManager extends Component
 {
     public $show = false;
     public $socialLinks = [];
-    public $genericLinks = [];
 
     public function mount()
     {
@@ -26,8 +25,8 @@ class LinksManager extends Component
 
     public function saveInputs()
     {
-        foreach ($this->socialLinks as $name => $url) {
-            $social = Social::where('name', $name)->first();
+        foreach ($this->socialLinks as $socialId => $url) {
+            $social = Social::find($socialId);
 
             if ($social) {
                 if (!empty($url)) {
@@ -36,25 +35,9 @@ class LinksManager extends Component
                         ['url' => $url]
                     );
                 } else {
-                    Link::where('user_id', Auth::id())->where('social_id', $social->id)->delete();
-                }
-            }
-        }
-
-        foreach ($this->genericLinks as $position => $linkData) {
-            if (!empty($linkData['url'])) {
-                Link::updateOrCreate(
-                    ['id' => $linkData['id']],
-                    [
-                        'user_id' => Auth::id(),
-                        'social_id' => null,
-                        'position' => $position,
-                        'url' => $linkData['url']
-                    ]
-                );
-            } else {
-                if ($linkData['id']) {
-                    Link::find($linkData['id'])->delete();
+                    Link::where('user_id', Auth::id())
+                        ->where('social_id', $social->id)
+                        ->delete();
                 }
             }
         }
@@ -65,8 +48,11 @@ class LinksManager extends Component
 
     protected function loadLinks()
     {
-        $existingGenericLinks = Link::where('user_id', Auth::id())->whereNull('social_id')->orderBy('position')->get();
-        $this->genericLinks = $existingGenericLinks->map(fn($link) => ['id' => $link->id, 'url' => $link->url])->pad(5, ['id' => null, 'url' => ''])->toArray();
+        $userLinks = Auth::user()->links()->get()->keyBy('social_id');
+
+        $this->socialLinks = Social::all()->mapWithKeys(function ($social) use ($userLinks) {
+            return [$social->id => $userLinks->has($social->id) ? $userLinks[$social->id]->url : ''];
+        })->toArray();
     }
 
     public function render()

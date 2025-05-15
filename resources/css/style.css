@@ -57,12 +57,3 @@ body {
 .card-link {
     text-decoration: none;
 }
-
-.card-container {
-    transition: all 0.1s ease;
-}
-
-.card-container:hover {
-    box-shadow: 5px 5px var(--tertiary-color);
-    border-radius: 5px;
-}

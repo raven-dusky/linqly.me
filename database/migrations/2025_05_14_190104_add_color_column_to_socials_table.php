@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('links', function (Blueprint $table) {
-            $table->unsignedBigInteger('position')->nullable()->after('social_id');
+        Schema::table('socials', function (Blueprint $table) {
+            $table->string('color')->after('icon');
         });
     }
 
@@ -21,8 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('links', function (Blueprint $table) {
-            $table->dropColumn('position');
+        Schema::table('socials', function (Blueprint $table) {
+            $table->dropColumn('color');
         });
     }
 };
