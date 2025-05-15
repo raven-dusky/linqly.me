@@ -58,6 +58,17 @@ body {
     color: blue;
 }
 
+.card-button {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px; /* uguale al tuo container */
+    margin: 0 auto;
+    z-index: 1000; /* opzionale, per stare sopra altri elementi */
+}
+
 .card-link {
     text-decoration: none;
 }

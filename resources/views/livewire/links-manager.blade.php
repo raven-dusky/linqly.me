@@ -34,10 +34,26 @@
         <h1>🫣 Oops! It looks like there are no links here!</h1>
         @endif
     @endif
-        <div class="row justify-content-end my-5">
+    @if(count($links) == 0)
+        @if($show)
+            <div class="row justify-content-end my-5">
+                <button type="submit" class="btn auth-btn">
+                    {{ $show ? 'Save' : 'Customize' }}
+                </button>
+            </div>
+        @else
+        <div class="row justify-content-end my-5 card-button">
             <button type="submit" class="btn auth-btn">
                 {{ $show ? 'Save' : 'Customize' }}
             </button>
         </div>
+        @endif
+    @else
+    <div class="row justify-content-end my-5">
+        <button type="submit" class="btn auth-btn">
+            {{ $show ? 'Save' : 'Customize' }}
+        </button>
+    </div>
+    @endif
     </form>
 </div>

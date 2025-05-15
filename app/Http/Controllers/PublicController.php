@@ -23,7 +23,7 @@ class PublicController extends Controller
 
     public function show(User $user)
     {
-        if(Auth::user()->name != $user->name) {
+        if(Auth::user()->name == $user->name) {
             return view('welcome');
         } else {
             $links = $user->links;

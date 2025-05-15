@@ -28,7 +28,7 @@
                             <input type="password" class="form-control auth-input" id="password_confirmation" name="password_confirmation" placeholder="Confirm Password">
                         </div>
                         <div class="mb-3 d-flex justify-content-center flex-column">
-                            <p class="text-center">By creating an account you agree with our <a href="">terms</a> and <a href="">privacy policy</a></p>
+                            <p class="text-center">By creating an account you agree with our <a href="" class="auth-link">terms</a> and <a href="" class="auth-link">privacy policy</a></p>
                             <button type="submit" class="btn auth-btn">Sing Up</button>
                             <p class="mt-2">Already have an account? <a href="{{ route('login') }}" class="auth-link">Sign in</a></p>
                         </div>
