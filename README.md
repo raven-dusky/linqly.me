@@ -14,18 +14,6 @@ Linqly.me is an open-source project inspired by Linktree, designed for those who
 
 ---
 
-## 🛠 Tech Stack
-
-- PHP
-- Laravel
-- Eloquent
-- Fortify
-- Livewire
-- MySQL
-- Bootstrap
-
----
-
 <p align="center">
   <img src="screenshots/IMG_0273.jpg" width="180" height="400"/>
   <img src="screenshots/IMG_0274.jpg" width="180" height="400"/>
@@ -39,6 +27,18 @@ Linqly.me is an open-source project inspired by Linktree, designed for those who
   <img src="screenshots/IMG_0279.jpg" width="180" height="400"/>
   <img src="screenshots/IMG_0280.jpg" width="180" height="400"/>
 </p>
+
+---
+
+## 🛠 Tech Stack
+
+- PHP
+- Laravel
+- Eloquent
+- Fortify
+- Livewire
+- MySQL
+- Bootstrap
 
 ---
 
