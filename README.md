@@ -4,6 +4,16 @@ Linqly.me is an open-source project inspired by Linktree, designed for those who
 
 ---
 
+## 🚀 Main Features
+
+- **Secure registration** with mandatory email verification  
+- **Password reset** functionality  
+- **Customization**: add links to the most popular platforms (about 20, including social, streaming, payments, etc.) + 5 additional generic links  
+- **Mobile-first design**, super minimal and intuitive  
+- **Secure authentication** powered by Laravel Fortify  
+
+---
+
 <p align="center">
   <img src="screenshots/IMG_0273.jpg" width="180" height="400"/>
   <img src="screenshots/IMG_0274.jpg" width="180" height="400"/>
@@ -17,16 +27,6 @@ Linqly.me is an open-source project inspired by Linktree, designed for those who
   <img src="screenshots/IMG_0279.jpg" width="180" height="400"/>
   <img src="screenshots/IMG_0280.jpg" width="180" height="400"/>
 </p>
-
----
-
-## 🚀 Main Features
-
-- **Secure registration** with mandatory email verification  
-- **Password reset** functionality  
-- **Customization**: add links to the most popular platforms (about 20, including social, streaming, payments, etc.) + 5 additional generic links  
-- **Mobile-first design**, super minimal and intuitive  
-- **Secure authentication** powered by Laravel Fortify  
 
 ---
 
