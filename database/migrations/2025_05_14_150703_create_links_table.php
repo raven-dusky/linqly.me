@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('links', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->onCascade('delete');
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('social_id')->nullable();
-            $table->foreign('social_id')->references('id')->on('socials');
+            $table->foreign('social_id')->references('id')->on('socials')->onCascade('delete');
             $table->string('url');
             $table->timestamps();
         });

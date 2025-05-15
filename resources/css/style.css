@@ -23,6 +23,10 @@ body {
     color: var(--text-color);
 }
 
+.nav-color {
+    background-color: var(--background-color);
+}
+
 .auth-d-flex {
     min-height: 100vh;
 }
