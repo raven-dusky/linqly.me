@@ -1,9 +1,9 @@
 <x-layout>
-    <div class="d-flex justify-content-center align-items-center auth-d-flex">
+    <div class="d-flex justify-content-center align-items-center">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8">
-                    <form method="POST" action="{{ route('password.email') }}" class="p-5 m-5">
+                    <form method="POST" action="{{ route('password.email') }}" class="p-5">
                     @csrf
                         <h1 class="text-left mb-1 auth-title">😓 Forgot your password?</h1>
                         <p class="mb-4">That's okay, it happens! Enter your email address below and we'll send you a link to reset your password.</p>
