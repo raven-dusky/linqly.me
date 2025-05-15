@@ -4,6 +4,18 @@ Linqly.me is an open-source project inspired by Linktree, designed for those who
 
 ---
 
+![](screenshots/IMG_0273.jpg)
+![](screenshots/IMG_0274.jpg)
+![](screenshots/IMG_0275.jpg)
+![](screenshots/IMG_0276.jpg)
+![](screenshots/IMG_0281.jpg)
+![](screenshots/IMG_0277.jpg)
+![](screenshots/IMG_0278.jpg)
+![](screenshots/IMG_0279.jpg)
+![](screenshots/IMG_0280.jpg)
+
+---
+
 ## 🚀 Main Features
 
 - **Secure registration** with mandatory email verification  
